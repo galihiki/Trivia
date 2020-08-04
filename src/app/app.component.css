@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.main-nav{
+    background: linear-gradient(to right, #314455, #1d2e36);
+    height: 50px;
+}
+
+.main-nav-options{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    font-size: 22px;
+}
+
+.main-nav-item{
+    padding: 0 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav-item:hover,
+.active{
+    color: #97aabd;
+}
+

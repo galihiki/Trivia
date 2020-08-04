@@ -1,0 +1,18 @@
+<div *ngFor="let answer of answers; let i=index" class="btn-container">
+  <button 
+      [disabled]="status==='rightAnswer' || status==='wrongAnswer'"
+      [ngClass]="{'right-answer': isCorrectAnswer(i), 
+                  'wrong-answer' : isWrongAnswer(i),
+                  'selected-answer' : isSelectedAnswer(i) }" 
+      class="answer-btn" 
+      (click)="selected(i)">
+    <img src="./assets/v.png" *ngIf="isCorrectAnswer(i)" class="verify-img">
+    <img src="./assets/x.png" *ngIf="isWrongAnswer(i)" class="verify-img">
+    <div class="answer-text" 
+          [innerHTML]="answer"
+          [ngClass]="{'right-answer-text': isCorrectAnswer(i), 
+                      'wrong-answer-text' : isWrongAnswer(i),
+                      'selected-answer-text' : isSelectedAnswer(i) }"> 
+    </div>
+  </button>
+</div>

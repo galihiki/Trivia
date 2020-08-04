@@ -1,0 +1,42 @@
+<div class="main-container">
+    <img class="img" src="/../../assets/dice.jpg">
+    <div class="settings-container">
+        <form class="settings-form" (ngSubmit)="onSaveSettings()">
+            <div class="form-contant">
+                <div class="form-item category-container" >
+                    <div class="category-select-container">
+                        <label class="form-label">Category</label>
+                        <select name="category" 
+                            [(ngModel)]="selectedCategoryId"
+                            (ngModelChange)="onSelsctedCategory()">
+                            <option *ngFor="let category of categories"
+                                    [value]="category.value"> 
+                                    {{category.displayName}}</option>
+                        </select>
+                    </div>
+                    <img class="category-img" *ngIf="selectedCategoryImg" src="{{selectedCategoryImg}}">
+                </div> 
+                <div class="form-item">
+                    <div class="category-select-container">
+                        <label class="form-label">Difficulty</label>
+                        <select name="difficulty" [(ngModel)]="selectedDifficulty">
+                            <option *ngFor="let difficulty of difficultyLevels"
+                                    [value]="difficulty">{{difficulty}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="form-label">Show correct answer</label>
+                    <div class="checkbox-container">
+                        <input type="checkbox" 
+                               value="displayCorrectAnswer" 
+                               (click)="onShowCorrectAnswer()">
+                    </div>
+                </div>
+            </div>
+            <div class="form-btn">
+                <button class="save-settings-btn" type="submit">Save Settings</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+:host{
+    flex-grow: 1;
+}
+
+.question-container{
+    width: 70%;
+    margin: auto;
+    padding: 20px 0;
+    height: 100%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.breadcrumb{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0 auto;
+    padding: 16px 0;
+}
+
+.breadcrumb li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    list-style: none;
+    background-color: #C9CFD3;
+}
+
+.selected-breadcrumb{
+    background-color: #0D7BAB !important;
+}
+
+.backgroung-img{
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/../../assets/dice.jpg");
+    background-size: 30vw 100vh;
+    background-repeat: no-repeat;
+}
+
+@media(max-width: 815px){
+    .question-container{
+        width: 85%;
+    }
+}

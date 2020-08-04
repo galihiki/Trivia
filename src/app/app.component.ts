@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component,  } from '@angular/core';
+import { DataService } from './services/data.service';
+import { QuestionData, Questions } from './types';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { GameOverDialogComponent } from './game-over-dialog/game-over-dialog.component';
+import { Status } from './enum';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  constructor(private data: DataService, private dialog: MatDialog){}
 }
+
