@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 gh-pages:
 1. ng build — prod
-2. ngh — dir=dist/trivia
+2. ngh — dir=dist

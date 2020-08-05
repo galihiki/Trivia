@@ -15,11 +15,11 @@ export class SettingsComponent {
     {displayName: "All Categories", value: 0},
     {displayName: "General Knowledge", value: 9},
     {displayName: "Books", value: 10},
-    {displayName: "Film", value: 11,img: "/../../assets/film.png"},
-    {displayName: "Music", value: 12, img: "/../../assets/music.png"},
+    {displayName: "Film", value: 11,img: "assets/film.png"},
+    {displayName: "Music", value: 12, img: "assets/music.png"},
     {displayName: "Science & Nature", value: 17},
     {displayName: "Television", value: 14},
-    {displayName: "Geography", value: 22, img: "/../../assets/world-map.png"},
+    {displayName: "Geography", value: 22, img: "assets/world-map.png"},
     {displayName: "Celebrities", value: 26},
   ]
 
