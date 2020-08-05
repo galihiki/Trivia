@@ -9,7 +9,7 @@ import { Status } from '../enum';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
-  private _questionData: QuestionData 
+  _questionData: QuestionData 
   @Output() statusChange = new EventEmitter();
   answers: Array<string>; 
   currentAnswer: string = null;
