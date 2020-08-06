@@ -10,8 +10,8 @@ export class DataService {
 
   getData(){
     let settings = this.settingsService.getSettings();
-    let category = settings.categoryId !== 0 ? "&category="+settings.categoryId : "";
-    let difficulty = settings.difficulty !== Difficulty.AnyDifficulty ? "&difficulty="+settings.difficulty.toLowerCase() : "";
+    let category = settings.selectedCategoryId !== 0 ? "&category="+settings.selectedCategoryId : "";
+    let difficulty = settings.selectedDifficulty !== Difficulty.AnyDifficulty ? "&difficulty="+settings.selectedDifficulty.toLowerCase() : "";
     
     return this.http.get('https://opentdb.com/api.php?amount=10&type=multiple'
                         + category + difficulty);
