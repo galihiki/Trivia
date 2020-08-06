@@ -14,9 +14,8 @@ export class SettingsComponent {
   categories;
   difficultyLevels = [Difficulty.AnyDifficulty, Difficulty.Easy, Difficulty.Medium, Difficulty.Hard]
   displayCorrectAnswer = false;
-  selectedCategoryId: any = 0;
-  selectedDifficulty = Difficulty.AnyDifficulty;
   selectedCategoryImg;
+  settings;
 
   constructor( private settingsService: SettingsService, 
                private activatedRoute: ActivatedRoute,
@@ -24,6 +23,10 @@ export class SettingsComponent {
 
   ngOnInit(){
     this.categories = this.settingsService.getCategories();
+    this.settings = this.settingsService.getSettings();
+    if(this.settings.selectedCategoryId){
+      this.onSelsctedCategory();
+    }
   }
 
   onShowCorrectAnswer(){
@@ -31,13 +34,13 @@ export class SettingsComponent {
   }
 
   onSaveSettings(){
-    this.settingsService.setCategory(parseInt(this.selectedCategoryId));
-    this.settingsService.setDifficulty(this.selectedDifficulty);
+    this.settingsService.setCategory(parseInt(this.settings.selectedCategoryId));
+    this.settingsService.setDifficulty(this.settings.selectedDifficulty);
     this.router.navigate(["/trivia"]);
   }
 
   onSelsctedCategory(){
-     let selectedCategory= _.find(this.categories, {value: parseInt(this.selectedCategoryId)});
+     let selectedCategory= _.find(this.categories, {value: parseInt(this.settings.selectedCategoryId)});
      this.selectedCategoryImg = selectedCategory["img"]; 
   }
 

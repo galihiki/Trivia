@@ -81,3 +81,9 @@ app-answers{
     width: 100%;
     flex-wrap: wrap;
 }
+
+@media(max-width: 815px){
+    .question-container{
+        flex-direction: column-reverse;
+    }
+}

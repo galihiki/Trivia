@@ -7,7 +7,7 @@
                     <div class="category-select-container">
                         <label class="form-label">Category</label>
                         <select name="category" 
-                            [(ngModel)]="selectedCategoryId"
+                            [(ngModel)]="settings.selectedCategoryId"
                             (ngModelChange)="onSelsctedCategory()">
                             <option *ngFor="let category of categories"
                                     [value]="category.value"> 
@@ -19,7 +19,7 @@
                 <div class="form-item">
                     <div class="category-select-container">
                         <label class="form-label">Difficulty</label>
-                        <select name="difficulty" [(ngModel)]="selectedDifficulty">
+                        <select name="difficulty" [(ngModel)]="settings.selectedDifficulty">
                             <option *ngFor="let difficulty of difficultyLevels"
                                     [value]="difficulty">{{difficulty}}</option>
                         </select>
@@ -29,7 +29,7 @@
                     <label class="form-label">Show correct answer</label>
                     <div class="checkbox-container">
                         <input type="checkbox" 
-                               value="displayCorrectAnswer" 
+                               value="settings.displayCorrectAnswer" 
                                (click)="onShowCorrectAnswer()">
                     </div>
                 </div>
