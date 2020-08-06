@@ -416,7 +416,7 @@ var HomeComponent = /** @class */ (function () {
 /***/ "./src/app/pages/settings/settings.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ":host{\r\n    -webkit-box-flex: 1;\r\n        -ms-flex-positive: 1;\r\n            flex-grow: 1;\r\n}\r\n\r\n.main-container{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    height: 100%;\r\n}\r\n\r\n.img{\r\n    max-width: 30vw;\r\n    min-width: 230px;\r\n    height: calc(100vh - 50px);\r\n}\r\n\r\n.settings-container{\r\n    padding: 16px;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.settings-form{\r\n    width: 80%;\r\n    height: 100%;\r\n    position: relative;\r\n    min-width: 340px;\r\n    margin: auto;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n}\r\n\r\n.form-contant{\r\n    -webkit-box-flex: 1;\r\n        -ms-flex-positive: 1;\r\n            flex-grow: 1;\r\n}\r\n\r\n.form-item{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    margin: 16px 0;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n}\r\n\r\n.form-label{\r\n    font-size: 24px;\r\n    padding: 8px 0;\r\n}\r\n\r\n.settings-container select{\r\n    border: 1px solid #59253a;\r\n    border-radius: 3px;\r\n    font-size: 16px;\r\n    width: 195px;\r\n    padding: 4px 8px;\r\n    max-height: 30px;\r\n}\r\n\r\n.category-container{\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n            align-items: center;\r\n    -webkit-box-pack: justify;\r\n        -ms-flex-pack: justify;\r\n            justify-content: space-between;\r\n}\r\n\r\n.category-select-container{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\r\n    height: 100%;\r\n}\r\n\r\n.category-img{\r\n    max-width: 150px;\r\n    height: 100px;\r\n    margin: 16px;\r\n}\r\n\r\n.checkbox-container{\r\n    width: 195px;\r\n    text-align: center;\r\n}\r\n\r\n.settings-container input[type=\"checkbox\"]{\r\n    margin-right: 0;\r\n}\r\n\r\n.form-btn{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: reverse;\r\n        -ms-flex-direction: row-reverse;\r\n            flex-direction: row-reverse;\r\n}\r\n\r\n.save-settings-btn{\r\n    padding: 5px 20px;\r\n    border-radius: 15px;\r\n    width: 200px;\r\n    background-color: #9e5a63;\r\n    color: white;\r\n    border: 1px solid #9e5a63;\r\n    font-size: 19px;\r\n}\r\n\r\n@media(max-width: 710px){\r\n    .category-container{\r\n        -webkit-box-orient: vertical;\r\n        -webkit-box-direction: normal;\r\n            -ms-flex-direction: column;\r\n                flex-direction: column;\r\n    }\r\n    .form-item{\r\n        -webkit-box-align: center;\r\n            -ms-flex-align: center;\r\n                align-items: center;\r\n    }\r\n\r\n    .form-btn{\r\n        -webkit-box-pack: center;\r\n            -ms-flex-pack: center;\r\n                justify-content: center;\r\n    }\r\n}\r\n\r\n@media(max-width: 600px){\r\n    .img{\r\n        max-width: 100%;\r\n        height: 200px;\r\n    }\r\n    .main-container{\r\n        -webkit-box-orient: vertical;\r\n        -webkit-box-direction: normal;\r\n            -ms-flex-direction: column;\r\n                flex-direction: column;\r\n    }\r\n}"
+module.exports = ":host{\r\n    -webkit-box-flex: 1;\r\n        -ms-flex-positive: 1;\r\n            flex-grow: 1;\r\n}\r\n\r\n.main-container{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    height: 100%;\r\n}\r\n\r\n.img{\r\n    max-width: 30vw;\r\n    min-width: 230px;\r\n    height: calc(100vh - 50px);\r\n}\r\n\r\n.settings-container{\r\n    padding: 16px;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.settings-form{\r\n    width: 80%;\r\n    height: 100%;\r\n    position: relative;\r\n    min-width: 340px;\r\n    margin: auto;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n}\r\n\r\n.form-contant{\r\n    -webkit-box-flex: 1;\r\n        -ms-flex-positive: 1;\r\n            flex-grow: 1;\r\n}\r\n\r\n.form-item{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    margin: 16px 0;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n}\r\n\r\n.form-label{\r\n    font-size: 24px;\r\n    padding: 8px 0;\r\n}\r\n\r\n.settings-container select{\r\n    border: 1px solid #59253a;\r\n    border-radius: 3px;\r\n    font-size: 16px;\r\n    width: 195px;\r\n    padding: 4px 8px;\r\n    max-height: 30px;\r\n}\r\n\r\n.category-container{\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n            align-items: center;\r\n    -webkit-box-pack: justify;\r\n        -ms-flex-pack: justify;\r\n            justify-content: space-between;\r\n    height: 130px;\r\n}\r\n\r\n.category-select-container{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    -webkit-box-pack: center;\r\n        -ms-flex-pack: center;\r\n            justify-content: center;\r\n    height: 100%;\r\n}\r\n\r\n.category-img{\r\n    max-width: 200px;\r\n    height: 130px;\r\n    margin: 0 16px;\r\n}\r\n\r\n.checkbox-container{\r\n    width: 195px;\r\n    text-align: center;\r\n}\r\n\r\n.settings-container input[type=\"checkbox\"]{\r\n    margin-right: 0;\r\n}\r\n\r\n.form-btn{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: reverse;\r\n        -ms-flex-direction: row-reverse;\r\n            flex-direction: row-reverse;\r\n}\r\n\r\n.save-settings-btn{\r\n    padding: 5px 20px;\r\n    border-radius: 15px;\r\n    width: 200px;\r\n    background-color: #9e5a63;\r\n    color: white;\r\n    border: 1px solid #9e5a63;\r\n    font-size: 19px;\r\n}\r\n\r\n@media(max-width: 710px){\r\n    .category-container{\r\n        -webkit-box-orient: vertical;\r\n        -webkit-box-direction: normal;\r\n            -ms-flex-direction: column;\r\n                flex-direction: column;\r\n        height: inherit;\r\n    }\r\n    .form-item{\r\n        -webkit-box-align: center;\r\n            -ms-flex-align: center;\r\n                align-items: center;\r\n    }\r\n\r\n    .form-btn{\r\n        -webkit-box-pack: center;\r\n            -ms-flex-pack: center;\r\n                justify-content: center;\r\n    }\r\n}\r\n\r\n@media(max-width: 600px){\r\n    .img{\r\n        max-width: 100%;\r\n        height: 200px;\r\n    }\r\n    .main-container{\r\n        -webkit-box-orient: vertical;\r\n        -webkit-box-direction: normal;\r\n            -ms-flex-direction: column;\r\n                flex-direction: column;\r\n    }\r\n\r\n    .category-img{\r\n        margin: 16px;\r\n    }\r\n}"
 
 /***/ }),
 
@@ -457,22 +457,14 @@ var SettingsComponent = /** @class */ (function () {
         this.settingsService = settingsService;
         this.activatedRoute = activatedRoute;
         this.router = router;
-        this.categories = [
-            { displayName: "All Categories", value: 0 },
-            { displayName: "General Knowledge", value: 9 },
-            { displayName: "Books", value: 10 },
-            { displayName: "Film", value: 11, img: "assets/film.png" },
-            { displayName: "Music", value: 12, img: "assets/music.png" },
-            { displayName: "Science & Nature", value: 17 },
-            { displayName: "Television", value: 14 },
-            { displayName: "Geography", value: 22, img: "assets/world-map.png" },
-            { displayName: "Celebrities", value: 26 },
-        ];
         this.difficultyLevels = [__WEBPACK_IMPORTED_MODULE_1__enum__["a" /* Difficulty */].AnyDifficulty, __WEBPACK_IMPORTED_MODULE_1__enum__["a" /* Difficulty */].Easy, __WEBPACK_IMPORTED_MODULE_1__enum__["a" /* Difficulty */].Medium, __WEBPACK_IMPORTED_MODULE_1__enum__["a" /* Difficulty */].Hard];
         this.displayCorrectAnswer = false;
         this.selectedCategoryId = 0;
         this.selectedDifficulty = __WEBPACK_IMPORTED_MODULE_1__enum__["a" /* Difficulty */].AnyDifficulty;
     }
+    SettingsComponent.prototype.ngOnInit = function () {
+        this.categories = this.settingsService.getCategories();
+    };
     SettingsComponent.prototype.onShowCorrectAnswer = function () {
         this.displayCorrectAnswer = !this.displayCorrectAnswer;
     };
@@ -734,8 +726,8 @@ var DataService = /** @class */ (function () {
     }
     DataService.prototype.getData = function () {
         var settings = this.settingsService.getSettings();
-        var category = settings.categoryId !== 0 ? "&category=" + settings.categoryId : "";
-        var difficulty = settings.difficulty !== __WEBPACK_IMPORTED_MODULE_3__enum__["a" /* Difficulty */].AnyDifficulty ? "&difficulty=" + settings.difficulty.toLowerCase() : "";
+        var category = settings.selectedCategoryId !== 0 ? "&category=" + settings.selectedCategoryId : "";
+        var difficulty = settings.selectedDifficulty !== __WEBPACK_IMPORTED_MODULE_3__enum__["a" /* Difficulty */].AnyDifficulty ? "&difficulty=" + settings.selectedDifficulty.toLowerCase() : "";
         return this.http.get('https://opentdb.com/api.php?amount=10&type=multiple'
             + category + difficulty);
     };
@@ -757,6 +749,8 @@ var DataService = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__enum__ = __webpack_require__("./src/app/enum.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash__ = __webpack_require__("./node_modules/lodash/lodash.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -765,28 +759,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 
 
+
 var SettingsService = /** @class */ (function () {
     function SettingsService() {
         this.settings = {
-            categoryId: 0,
-            difficulty: __WEBPACK_IMPORTED_MODULE_1__enum__["a" /* Difficulty */].AnyDifficulty,
+            selectedCategoryId: 0,
+            selectedDifficulty: __WEBPACK_IMPORTED_MODULE_1__enum__["a" /* Difficulty */].AnyDifficulty,
             displayCorrectAnswer: false
         };
+        this.categories = [
+            { displayName: "All Categories", value: 0 },
+            { displayName: "General Knowledge", value: 9, img: "assets/general-knowledge.png" },
+            { displayName: "Books", value: 10, img: "assets/book.png" },
+            { displayName: "Film", value: 11, img: "assets/film.png" },
+            { displayName: "Music", value: 12, img: "assets/music.png" },
+            { displayName: "Science & Nature", value: 17, img: "assets/science.png" },
+            { displayName: "Television", value: 14, img: "assets/tv.png" },
+            { displayName: "Geography", value: 22, img: "assets/world-map.png" },
+            { displayName: "Celebrities", value: 26, img: "assets/celebrities.png" },
+        ];
     }
+    SettingsService.prototype.getCategories = function () {
+        return this.categories;
+    };
+    SettingsService.prototype.getCategoryImg = function (categoryId) {
+        var category = __WEBPACK_IMPORTED_MODULE_2_lodash__["find"](this.categories, { value: categoryId });
+        return category.img;
+    };
     SettingsService.prototype.setCategory = function (categoryId) {
-        this.settings.categoryId = categoryId;
+        this.settings.selectedCategoryId = categoryId;
     };
     SettingsService.prototype.setDifficulty = function (difficulty) {
-        this.settings.difficulty = difficulty;
+        this.settings.selectedDifficulty = difficulty;
     };
     SettingsService.prototype.setDisplayCorrectAnswer = function (displayCorrectAnswer) {
         this.settings.displayCorrectAnswer = displayCorrectAnswer;
     };
-    SettingsService.prototype.getCategory = function () {
-        return this.settings.categoryId;
+    SettingsService.prototype.getCategoryId = function () {
+        return this.settings.selectedCategoryId;
     };
     SettingsService.prototype.getDifficulty = function () {
-        return this.settings.difficulty;
+        return this.settings.selectedDifficulty;
     };
     SettingsService.prototype.getDisplayCorrectAnswer = function () {
         return this.settings.displayCorrectAnswer;
