@@ -14,7 +14,7 @@ export class SettingsComponent {
   categories;
   difficultyLevels = [Difficulty.AnyDifficulty, Difficulty.Easy, Difficulty.Medium, Difficulty.Hard]
   displayCorrectAnswer = false;
-  selectedCategoryId:any = 0;
+  selectedCategoryId: any = 0;
   selectedDifficulty = Difficulty.AnyDifficulty;
   selectedCategoryImg;
 
@@ -31,7 +31,7 @@ export class SettingsComponent {
   }
 
   onSaveSettings(){
-    this.settingsService.setCategory(this.selectedCategoryId);
+    this.settingsService.setCategory(parseInt(this.selectedCategoryId));
     this.settingsService.setDifficulty(this.selectedDifficulty);
     this.router.navigate(["/trivia"]);
   }

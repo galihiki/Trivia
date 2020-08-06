@@ -1,6 +1,9 @@
-<div class="question-text-container">
-  <span class="question question-number">{{"Q:"+(questionData.index+1)}}</span>
-  <span class="question" [innerHTML]="questionData.question"></span>
+<div class="question-container">
+  <img class="category-img" src="{{selectedCateroryImg}}" *ngIf="selectedCateroryImg">
+  <div class="question-text-container">
+    <span class="question question-number">{{"Q:"+(questionData.index+1)}}</span>
+    <span class="question" [innerHTML]="questionData.question"></span>
+  </div>
 </div>
 <div class="answers-container">
   <app-answers 

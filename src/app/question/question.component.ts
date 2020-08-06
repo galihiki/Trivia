@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter,
           OnChanges, SimpleChanges, SimpleChange } from '@angular/core';
 import { QuestionData } from '../types';
 import { Status } from '../enum';
+import { SettingsService } from '../services/settings.service';
 
 @Component({
   selector: 'app-question',
@@ -15,8 +16,9 @@ export class QuestionComponent implements OnInit {
   currentAnswer: string = null;
   status: string;
   hideContinueBtn : boolean = true;
+  selectedCateroryImg;
 
-  constructor() { }
+  constructor(private settingsService: SettingsService) { }
 
   get questionData(): QuestionData {
     return this._questionData;
@@ -29,6 +31,7 @@ export class QuestionComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.selectedCateroryImg = this.settingsService.getSelectedCategoryImg();
   }
 
   setAnswers(){

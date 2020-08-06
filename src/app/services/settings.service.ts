@@ -28,12 +28,12 @@ export class SettingsService {
         return this.categories;
     }
 
-    getCategoryImg(categoryId){
-        let category = _.find(this.categories, {value: categoryId});
-        return category.img;
+    getSelectedCategoryImg(){
+        let category = _.find(this.categories, {value: this.settings.selectedCategoryId});
+        return category? category.img : "";
     }
 
-    setCategory(categoryId){
+    setCategory(categoryId: number){
         this.settings.selectedCategoryId = categoryId;
     }
 

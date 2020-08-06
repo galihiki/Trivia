@@ -4,6 +4,7 @@
     justify-content: space-around;
     height: 100%;
 }
+
 .question{
     font-family: OpenSans;
     font-size: 24px;
@@ -11,15 +12,30 @@
     letter-spacing: 0;
 }
 
+.question-text-container{
+    width: 100%;
+    align-items: center;
+    align-items: baseline;
+}
+
+.category-img{
+    height: 130px;
+    padding-right: 8px;
+}
+
 .question-number{
     color: #0D7BAB;
     font-size: 32px;
+    margin-right: 8px;
 }
 
-.question-text-container{
+.question-container{
     padding: 16px 0;
     text-align: center;
     min-width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5%;
 }
 
 .answers-container{
