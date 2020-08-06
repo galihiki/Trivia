@@ -469,7 +469,7 @@ var SettingsComponent = /** @class */ (function () {
         this.displayCorrectAnswer = !this.displayCorrectAnswer;
     };
     SettingsComponent.prototype.onSaveSettings = function () {
-        this.settingsService.setCategory(this.selectedCategoryId);
+        this.settingsService.setCategory(parseInt(this.selectedCategoryId));
         this.settingsService.setDifficulty(this.selectedDifficulty);
         this.router.navigate(["/trivia"]);
     };
@@ -603,14 +603,14 @@ var TriviaComponent = /** @class */ (function () {
 /***/ "./src/app/question/question.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ":host{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    -ms-flex-pack: distribute;\r\n        justify-content: space-around;\r\n    height: 100%;\r\n}\r\n.question{\r\n    font-family: OpenSans;\r\n    font-size: 24px;\r\n    color: #223336;\r\n    letter-spacing: 0;\r\n}\r\n.question-number{\r\n    color: #0D7BAB;\r\n    font-size: 32px;\r\n}\r\n.question-text-container{\r\n    padding: 16px 0;\r\n    text-align: center;\r\n    min-width: 250px;\r\n}\r\n.answers-container{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n    padding: 16px 0;\r\n}\r\n.verify-btn{\r\n    background-color: #9e5a63;\r\n    border: 1px solid #9e5a63;\r\n    border-radius: 30px;\r\n    margin: auto;\r\n    width: 205px;\r\n    height: 45px;\r\n    vertical-align:top;\r\n}\r\n.verify-btn:hover:not([disabled]){\r\n    background-color: #8a4a53 !important;\r\n    border: 1px solid #8a4a53;\r\n}\r\n.verify-btn-container{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}\r\n.verify-btn-text{\r\n    font-family: OpenSans-Semibold;\r\n    font-size: 30px;\r\n    color: #FFFFFF;\r\n    letter-spacing: 0;\r\n    text-align: center;\r\n}\r\n.disabled-btn{\r\n    background-color: #F0F0F0;\r\n    border: 1px solid #F0F0F0;\r\n}\r\napp-answers{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    width: 100%;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n}"
+module.exports = ":host{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    -ms-flex-pack: distribute;\r\n        justify-content: space-around;\r\n    height: 100%;\r\n}\r\n\r\n.question{\r\n    font-family: OpenSans;\r\n    font-size: 24px;\r\n    color: #223336;\r\n    letter-spacing: 0;\r\n}\r\n\r\n.question-text-container{\r\n    width: 100%;\r\n    -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n            align-items: center;\r\n    -webkit-box-align: baseline;\r\n        -ms-flex-align: baseline;\r\n            align-items: baseline;\r\n}\r\n\r\n.category-img{\r\n    height: 130px;\r\n    padding-right: 8px;\r\n}\r\n\r\n.question-number{\r\n    color: #0D7BAB;\r\n    font-size: 32px;\r\n    margin-right: 8px;\r\n}\r\n\r\n.question-container{\r\n    padding: 16px 0;\r\n    text-align: center;\r\n    min-width: 250px;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n            align-items: center;\r\n    padding: 0 2.5%;\r\n}\r\n\r\n.answers-container{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n    padding: 16px 0;\r\n}\r\n\r\n.verify-btn{\r\n    background-color: #9e5a63;\r\n    border: 1px solid #9e5a63;\r\n    border-radius: 30px;\r\n    margin: auto;\r\n    width: 205px;\r\n    height: 45px;\r\n    vertical-align:top;\r\n}\r\n\r\n.verify-btn:hover:not([disabled]){\r\n    background-color: #8a4a53 !important;\r\n    border: 1px solid #8a4a53;\r\n}\r\n\r\n.verify-btn-container{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}\r\n\r\n.verify-btn-text{\r\n    font-family: OpenSans-Semibold;\r\n    font-size: 30px;\r\n    color: #FFFFFF;\r\n    letter-spacing: 0;\r\n    text-align: center;\r\n}\r\n\r\n.disabled-btn{\r\n    background-color: #F0F0F0;\r\n    border: 1px solid #F0F0F0;\r\n}\r\n\r\napp-answers{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    width: 100%;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n}"
 
 /***/ }),
 
 /***/ "./src/app/question/question.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"question-text-container\">\r\n  <span class=\"question question-number\">{{\"Q:\"+(questionData.index+1)}}</span>\r\n  <span class=\"question\" [innerHTML]=\"questionData.question\"></span>\r\n</div>\r\n<div class=\"answers-container\">\r\n  <app-answers \r\n    [answers]=answers\r\n    [status]=status \r\n    [correctAnswer]=_questionData.correct_answer\r\n    (MessageEvent)=\"receiveMessage($event)\">\r\n  </app-answers>\r\n</div>\r\n<div class=\"verify-btn-container\">\r\n  <button \r\n    class=\"verify-btn\" \r\n    *ngIf=\"!hideContinueBtn\" \r\n    (click)=\"sendMessage()\">\r\n    <span class=\"verify-btn-text\">Continue</span>\r\n  </button>\r\n  <button \r\n    class=\"verify-btn\" \r\n    *ngIf=\"hideContinueBtn\" \r\n    (click)=\"verifyAnswer()\" \r\n    [disabled]=\"!currentAnswer\"\r\n    [ngClass]=\"{'disabled-btn': !currentAnswer}\">\r\n    <span class=\"verify-btn-text\">OK</span>\r\n  </button>\r\n</div>\r\n"
+module.exports = "<div class=\"question-container\">\r\n  <img class=\"category-img\" src=\"{{selectedCateroryImg}}\" *ngIf=\"selectedCateroryImg\">\r\n  <div class=\"question-text-container\">\r\n    <span class=\"question question-number\">{{\"Q:\"+(questionData.index+1)}}</span>\r\n    <span class=\"question\" [innerHTML]=\"questionData.question\"></span>\r\n  </div>\r\n</div>\r\n<div class=\"answers-container\">\r\n  <app-answers \r\n    [answers]=answers\r\n    [status]=status \r\n    [correctAnswer]=_questionData.correct_answer\r\n    (MessageEvent)=\"receiveMessage($event)\">\r\n  </app-answers>\r\n</div>\r\n<div class=\"verify-btn-container\">\r\n  <button \r\n    class=\"verify-btn\" \r\n    *ngIf=\"!hideContinueBtn\" \r\n    (click)=\"sendMessage()\">\r\n    <span class=\"verify-btn-text\">Continue</span>\r\n  </button>\r\n  <button \r\n    class=\"verify-btn\" \r\n    *ngIf=\"hideContinueBtn\" \r\n    (click)=\"verifyAnswer()\" \r\n    [disabled]=\"!currentAnswer\"\r\n    [ngClass]=\"{'disabled-btn': !currentAnswer}\">\r\n    <span class=\"verify-btn-text\">OK</span>\r\n  </button>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -621,6 +621,7 @@ module.exports = "<div class=\"question-text-container\">\r\n  <span class=\"que
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuestionComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__enum__ = __webpack_require__("./src/app/enum.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_settings_service__ = __webpack_require__("./src/app/services/settings.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -632,8 +633,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var QuestionComponent = /** @class */ (function () {
-    function QuestionComponent() {
+    function QuestionComponent(settingsService) {
+        this.settingsService = settingsService;
         this.statusChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         this.currentAnswer = null;
         this.hideContinueBtn = true;
@@ -650,6 +653,7 @@ var QuestionComponent = /** @class */ (function () {
         configurable: true
     });
     QuestionComponent.prototype.ngOnInit = function () {
+        this.selectedCateroryImg = this.settingsService.getSelectedCategoryImg();
     };
     QuestionComponent.prototype.setAnswers = function () {
         var random = Math.floor(Math.random() * Math.floor(3));
@@ -688,7 +692,7 @@ var QuestionComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/question/question.component.html"),
             styles: [__webpack_require__("./src/app/question/question.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_settings_service__["a" /* SettingsService */]])
     ], QuestionComponent);
     return QuestionComponent;
 }());
@@ -782,9 +786,9 @@ var SettingsService = /** @class */ (function () {
     SettingsService.prototype.getCategories = function () {
         return this.categories;
     };
-    SettingsService.prototype.getCategoryImg = function (categoryId) {
-        var category = __WEBPACK_IMPORTED_MODULE_2_lodash__["find"](this.categories, { value: categoryId });
-        return category.img;
+    SettingsService.prototype.getSelectedCategoryImg = function () {
+        var category = __WEBPACK_IMPORTED_MODULE_2_lodash__["find"](this.categories, { value: this.settings.selectedCategoryId });
+        return category ? category.img : "";
     };
     SettingsService.prototype.setCategory = function (categoryId) {
         this.settings.selectedCategoryId = categoryId;
