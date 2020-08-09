@@ -152,14 +152,14 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "./src/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".container{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    height: 100%;\r\n}\r\n.main-nav{\r\n    background: -webkit-gradient(linear, left top, right top, from(#314455), to(#1d2e36));\r\n    background: linear-gradient(to right, #314455, #1d2e36);\r\n    height: 50px;\r\n}\r\n.main-nav-options{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n            align-items: center;\r\n    height: 100%;\r\n    font-size: 22px;\r\n}\r\n.main-nav-item{\r\n    padding: 0 8px;\r\n    color: white;\r\n    text-decoration: none;\r\n}\r\n.main-nav-item:hover,\r\n.active{\r\n    color: #97aabd;\r\n}\r\n\r\n"
+module.exports = ".container{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: vertical;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: column;\r\n            flex-direction: column;\r\n    height: 100%;\r\n}\r\n.main-nav{\r\n    background: #314455;\r\n    height: 50px;\r\n}\r\n.main-nav-options{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-orient: horizontal;\r\n    -webkit-box-direction: normal;\r\n        -ms-flex-direction: row;\r\n            flex-direction: row;\r\n    -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n            align-items: center;\r\n    height: 100%;\r\n    font-size: 22px;\r\n}\r\n.main-nav-item{\r\n    padding: 0 8px;\r\n    color: white;\r\n    text-decoration: none;\r\n}\r\n.main-nav-item:hover,\r\n.active{\r\n    color: #97aabd;\r\n}\r\n\r\n"
 
 /***/ }),
 
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <nav class=\"main-nav\">\r\n    <div class=\"main-nav-options\">\r\n      <a class=\"main-nav-item\" routerLink=\"/home\" routerLinkActive=\"active\">Home</a>\r\n      <a class=\"main-nav-item\" routerLink=\"/settings\" routerLinkActive=\"active\">Game Settings</a>\r\n      <a class=\"main-nav-item\" routerLink=\"/trivia\" routerLinkActive=\"active\">Play Trivia</a>\r\n    </div>\r\n  </nav>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\r\n  <nav class=\"main-nav\">\r\n    <div class=\"main-nav-options\">\r\n      <a class=\"main-nav-item\" routerLink=\"/home\" routerLinkActive=\"active\">Home</a>\r\n      <a class=\"main-nav-item\" routerLink=\"/settings\" routerLinkActive=\"active\">Settings</a>\r\n      <a class=\"main-nav-item\" routerLink=\"/trivia\" routerLinkActive=\"active\">Play Trivia</a>\r\n    </div>\r\n  </nav>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
