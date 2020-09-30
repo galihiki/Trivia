@@ -1,7 +1,6 @@
 :host{
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
 }
 .image{
     height: calc(100vh - 50px);
