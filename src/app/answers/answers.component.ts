@@ -19,7 +19,7 @@ export class AnswersComponent implements OnInit {
   constructor(private settingsService: SettingsService) { }
 
   ngOnInit() {
-    this.displayCorrectAnswer = this.settingsService.getDisplayCorrectAnswer;
+    this.displayCorrectAnswer = this.settingsService.getDisplayCorrectAnswer();
   }
 
   ngOnChanges(changes: SimpleChanges){
@@ -34,7 +34,8 @@ export class AnswersComponent implements OnInit {
   }
 
   isCorrectAnswer(index){
-    return index === this.selectedIndex && this.status==='rightAnswer';
+    return (index === this.selectedIndex && this.status==='rightAnswer') 
+            || (this.status==='wrongAnswer' && this.displayCorrectAnswer && this.answers[index] === this.correctAnswer);
   }
 
   isWrongAnswer(index){

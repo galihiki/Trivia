@@ -2,7 +2,7 @@
     <app-question
         *ngIf="questions"
         [questionData]=currentQuestion
-        (statusChange)="receiveMessage($event)">
+        (statusChange)="answerSelected($event)">
     </app-question>
     <ul class="breadcrumb">
       <li 

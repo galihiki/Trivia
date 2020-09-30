@@ -13,7 +13,6 @@ export class SettingsComponent {
   
   categories;
   difficultyLevels = [Difficulty.AnyDifficulty, Difficulty.Easy, Difficulty.Medium, Difficulty.Hard]
-  displayCorrectAnswer = false;
   selectedCategoryImg;
   settings;
 
@@ -30,12 +29,13 @@ export class SettingsComponent {
   }
 
   onShowCorrectAnswer(){
-    this.displayCorrectAnswer = !this.displayCorrectAnswer;
+    this.settings.displayCorrectAnswer = !this.settings.displayCorrectAnswer;
   }
 
   onSaveSettings(){
     this.settingsService.setCategory(parseInt(this.settings.selectedCategoryId));
     this.settingsService.setDifficulty(this.settings.selectedDifficulty);
+    this.settingsService.setDisplayCorrectAnswer(this.settings.displayCorrectAnswer);
     this.router.navigate(["/trivia"]);
   }
 

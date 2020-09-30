@@ -13,7 +13,7 @@ import { SettingsService } from '../../services/settings.service';
 })
 export class TriviaComponent {
 
-    constructor(private data: DataService, private dialog: MatDialog,
+    constructor(private dataService: DataService, private dialog: MatDialog,
                 private settingsService: SettingsService){}
 
     index: number;
@@ -47,7 +47,7 @@ export class TriviaComponent {
     
       startNewGame(){
         this.index = 0;
-        this.data.getData().subscribe((q: Questions) => { 
+        this.dataService.getData().subscribe((q: Questions) => { 
           this.questions = q.results;
           this.setCurrentQuestion();
           this.correctAnswerCount = 0;
@@ -59,7 +59,7 @@ export class TriviaComponent {
         this.currentQuestion = this.questions[this.index];
       }
 
-    receiveMessage(status: string){
+    answerSelected(status: string){
         this.index++;
         if(this.index < this.questions.length){
           this.setCurrentQuestion();

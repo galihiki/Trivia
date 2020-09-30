@@ -18,29 +18,29 @@ export class QuestionComponent implements OnInit {
   hideContinueBtn : boolean = true;
   selectedCateroryImg;
 
-  constructor(private settingsService: SettingsService) { }
-
-  get questionData(): QuestionData {
-    return this._questionData;
-  }
-  
   @Input()
   set questionData(questionData: QuestionData) {
     this._questionData = questionData;
     this.setAnswers();
   }
 
+  get questionData(): QuestionData {
+    return this._questionData;
+  }
+
+  constructor(private settingsService: SettingsService) { }
+
   ngOnInit() {
     this.selectedCateroryImg = this.settingsService.getSelectedCategoryImg();
   }
 
   setAnswers(){
-    let random = Math.floor(Math.random() * Math.floor(3));
+    let random = Math.floor(Math.random() * 3);
     this.questionData.incorrect_answers.splice(random,0,this.questionData.correct_answer);
     this.answers = this.questionData.incorrect_answers;
   }
 
-  sendMessage(){
+  answerSelected(){
     this.statusChange.emit(this.status);
     this.status = null;
     this.hideContinueBtn = true;
